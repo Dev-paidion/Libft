@@ -6,7 +6,7 @@
 /*   By: kjungoo <kjungoo@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/15 17:19:53 by kjungoo           #+#    #+#             */
-/*   Updated: 2022/07/16 14:12:53 by kjungoo          ###   ########.fr       */
+/*   Updated: 2022/07/20 14:22:51 by kjungoo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ static char	*ft_strndup(char const *s, size_t n)
 	{
 		p[i] = s[i];
 		i++;
-	
 	}
 	p[i] = '\0';
 	return (p);
@@ -35,7 +34,8 @@ static size_t	ft_word_len(char const *s, char c)
 {
 	size_t	i;
 	size_t	len;
-	while (s[i] && s[i] != c )
+
+	while (s[i] && s[i] != c)
 	{
 		i++;
 		len++;
@@ -46,8 +46,8 @@ static size_t	ft_word_len(char const *s, char c)
 static size_t	ft_word_count(char const *s, char c)
 {
 	size_t	i;
-	size_t  count;
-	
+	size_t	count;
+
 	i = 0;
 	count = 0;
 	while (s[i] && s[i] == c)
@@ -60,12 +60,12 @@ static size_t	ft_word_count(char const *s, char c)
 		while (s[i] && s[i] == c)
 			i++;
 	}
-    return (count);
+	return (count);
 }
 
 static char	**ft_free_all(char **p_arr)
 {
-    size_t  i;
+	size_t	i;
 
 	i = 0;
 	while (p_arr[i])
@@ -87,7 +87,7 @@ char	**ft_split(char const *s, char c)
 	i = 0;
 	count = ft_word_count(s, c);
 	p_arr = (char **)malloc(sizeof(char *) + (count + 1));
-	if (p_arr == 0  || s == 0)
+	if (p_arr == 0 || s == 0)
 		return (0);
 	while (i < count)
 	{

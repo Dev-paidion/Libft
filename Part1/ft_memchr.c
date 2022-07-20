@@ -6,13 +6,13 @@
 /*   By: kjungoo <kjungoo@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/14 18:15:17 by kjungoo           #+#    #+#             */
-/*   Updated: 2022/07/15 18:20:34 by kjungoo          ###   ########.fr       */
+/*   Updated: 2022/07/18 19:39:10 by kjungoo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*memchr(const void *s, int c, size_t n)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
 	unsigned char	*ptr;
 

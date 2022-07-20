@@ -6,7 +6,7 @@
 /*   By: kjungoo <kjungoo@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/14 16:11:46 by kjungoo           #+#    #+#             */
-/*   Updated: 2022/07/14 18:00:59 by kjungoo          ###   ########.fr       */
+/*   Updated: 2022/07/20 14:34:39 by kjungoo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	i = 0;
 	dst_len = ft_strlen(dst);
 	src_len = ft_strlen(src);
-	if (dst_len > dstsize || dstsize)
+	if (dst_len > dstsize || dstsize == 0)
 		return (src_len + dstsize);
-	while ( src[i] && dst_len + i + 1 < dstsize)
+	while (src[i] && dst_len + i + 1 < dstsize)
 	{
 		dst[dst_len + i] = src[i];
 		i++;

@@ -6,11 +6,11 @@
 /*   By: kjungoo <kjungoo@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/14 17:39:31 by kjungoo           #+#    #+#             */
-/*   Updated: 2022/07/15 18:22:18 by kjungoo          ###   ########.fr       */
+/*   Updated: 2022/07/18 19:27:09 by kjungoo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	**strchr(const char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
 	int	i;
 
