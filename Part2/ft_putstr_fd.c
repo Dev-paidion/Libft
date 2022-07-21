@@ -6,7 +6,7 @@
 /*   By: kjungoo <kjungoo@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/18 20:40:40 by kjungoo           #+#    #+#             */
-/*   Updated: 2022/07/20 14:49:04 by kjungoo          ###   ########.fr       */
+/*   Updated: 2022/07/20 18:17:53 by kjungoo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	if (s == 0 || ft < 0)
+	if (s == 0 || fd < 0)
 		return ;
 	while (*s)
 	{
