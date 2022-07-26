@@ -6,7 +6,7 @@
 /*   By: kjungoo <kjungoo@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/15 17:09:20 by kjungoo           #+#    #+#             */
-/*   Updated: 2022/07/20 14:32:27 by kjungoo          ###   ########.fr       */
+/*   Updated: 2022/07/21 17:13:03 by kjungoo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	i = 0;
 	j = 0;
 	if (s == 0)
-		return (0);
+		return (ft_strdup(""));
 	str = (char *)malloc(sizeof(char) * (len + 1));
 	if (str == 0)
 		return (0);

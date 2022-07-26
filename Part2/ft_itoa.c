@@ -6,7 +6,7 @@
 /*   By: kjungoo <kjungoo@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/16 14:13:09 by kjungoo           #+#    #+#             */
-/*   Updated: 2022/07/20 14:11:19 by kjungoo          ###   ########.fr       */
+/*   Updated: 2022/07/21 17:25:16 by kjungoo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,19 +42,19 @@ char	*ft_itoa(int n)
 	int		sign;
 	size_t	len;
 
+	sign = 1;
 	if (n < 0)
 		sign = -1;
-	else
-		sign = 1;
 	len = ft_get_length(n);
 	p = (char *)malloc(sizeof(char) * (len + 1));
 	if (p == 0)
 		return (0);
-	p[len] = '\0';
-	while (len-- >= 0)
+	p[len--] = '\0';
+	while (len > 0)
 	{
-		p[len] = '0' + ft_abs(n % 10);
+		p[len] = ft_abs(n % 10) + '0';
 		n /= 10;
+		len--;
 	}
 	if (sign == -1)
 		p[0] = '-';

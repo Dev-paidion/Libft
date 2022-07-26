@@ -6,7 +6,7 @@
 /*   By: kjungoo <kjungoo@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/12 16:50:19 by kjungoo           #+#    #+#             */
-/*   Updated: 2022/07/12 20:32:32 by kjungoo          ###   ########.fr       */
+/*   Updated: 2022/07/21 17:13:52 by kjungoo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,10 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		str[j++] = s1[i];
 		i++;
 	}
+	i = 0;
 	while (s2[i] != '\0')
 	{
-		str[j++] = s1[i];
+		str[j++] = s2[i];
 		i++;
 	}
 	str[j] = '\0';
