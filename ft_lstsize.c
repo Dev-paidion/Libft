@@ -1,16 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kjungoo <kjungoo@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/11 15:52:47 by kjungoo           #+#    #+#             */
-/*   Updated: 2022/07/13 16:02:14 by kjungoo          ###   ########.fr       */
+/*   Created: 2022/07/20 15:51:22 by kjungoo           #+#    #+#             */
+/*   Updated: 2022/07/28 13:42:52 by kjungoo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalnum(int c)
+#include "libft.h"
+
+int	ft_lstsize(t_list *lst)
 {
-	return (is_alpha(c) || is_digit(c));
+	int		i;
+
+	i = 0;
+	while (lst != 0)
+	{
+		lst = lst->next;
+		i++;
+	}
+	return (i);
 }

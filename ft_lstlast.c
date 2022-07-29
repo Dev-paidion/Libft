@@ -1,31 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kjungoo <kjungoo@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/14 15:55:48 by kjungoo           #+#    #+#             */
-/*   Updated: 2022/07/20 14:34:28 by kjungoo          ###   ########.fr       */
+/*   Created: 2022/07/20 16:03:56 by kjungoo           #+#    #+#             */
+/*   Updated: 2022/07/26 18:13:15 by kjungoo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	strlcpy(char *dst, const char *src, size_t dstsize)
+t_list	*ft_lstlast(t_list *lst)
 {
-	size_t	i;
-	size_t	src_len;
-
-	i = 0;
-	src_len = ft_strlen(src);
-	if (dstsize == 0)
-		return (src_len);
-	while (src[i] && i < dstsize - 1)
+	if (lst == 0)
+		return (0);
+	while (lst -> next != 0)
 	{
-		dst[i] = src[i];
-		i++;
+		lst = lst->next;
 	}
-	dst[i] = '\0';
-	return (src_len);
+	return (lst);
 }

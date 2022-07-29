@@ -6,7 +6,7 @@
 /*   By: kjungoo <kjungoo@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/12 19:23:29 by kjungoo           #+#    #+#             */
-/*   Updated: 2022/07/13 16:00:27 by kjungoo          ###   ########.fr       */
+/*   Updated: 2022/07/28 18:28:15 by kjungoo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	tail;
 	size_t	i;
 
+	if (s1 == 0 || set == 0)
+		return (0);
 	head = 0;
 	while (s1[head] && is_char_in_set(s1[head], set))
 		head++;
@@ -44,9 +46,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 		return (0);
 	i = 0;
 	while (head < tail)
-	{
 		str[i++] = s1[head++];
-	}
 	str[i] = '\0';
 	return (str);
 }

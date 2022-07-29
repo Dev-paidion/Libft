@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstmap.c                                        :+:      :+:    :+:   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kjungoo <kjungoo@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/26 12:43:04 by kjungoo           #+#    #+#             */
-/*   Updated: 2022/07/26 12:43:43 by kjungoo          ###   ########.fr       */
+/*   Created: 2022/07/11 15:52:47 by kjungoo           #+#    #+#             */
+/*   Updated: 2022/07/26 19:52:48 by kjungoo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list *ft_lstmap(t_list *lst, void (*f)(void *))
+int	ft_isalnum(int c)
 {
-
+	return (ft_isalpha(c) || ft_isdigit(c));
 }

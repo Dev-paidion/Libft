@@ -6,7 +6,7 @@
 /*   By: kjungoo <kjungoo@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 17:36:11 by kjungoo           #+#    #+#             */
-/*   Updated: 2022/07/15 18:27:39 by kjungoo          ###   ########.fr       */
+/*   Updated: 2022/07/26 20:00:00 by kjungoo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,15 +27,14 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	{
 		while (i < len)
 		{
-			p_dst[i] = p_src[i++];
+			p_dst[i] = p_src[i];
+			i++;
 		}
 	}
-	else
+	while (i < len)
 	{
-		while (i < len)
-		{
-			p_dst[len - 1 - i] = p_src[len - 1 - i++];
-		}
+		p_dst[len - 1 - i] = p_src[len - 1 - i];
+		i++;
 	}
 	return (dst);
 }

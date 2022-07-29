@@ -6,15 +6,15 @@
 /*   By: kjungoo <kjungoo@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/16 14:13:09 by kjungoo           #+#    #+#             */
-/*   Updated: 2022/07/21 17:25:16 by kjungoo          ###   ########.fr       */
+/*   Updated: 2022/07/29 12:56:04 by kjungoo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t	ft_get_length(int n)
+static int	ft_get_length(int n)
 {
-	size_t	len;
+	int	len;
 
 	if (n <= 0)
 		len = 1;
@@ -40,7 +40,7 @@ char	*ft_itoa(int n)
 {
 	char	*p;
 	int		sign;
-	size_t	len;
+	int		len;
 
 	sign = 1;
 	if (n < 0)
@@ -50,7 +50,7 @@ char	*ft_itoa(int n)
 	if (p == 0)
 		return (0);
 	p[len--] = '\0';
-	while (len > 0)
+	while (len >= 0)
 	{
 		p[len] = ft_abs(n % 10) + '0';
 		n /= 10;

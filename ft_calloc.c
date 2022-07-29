@@ -6,7 +6,7 @@
 /*   By: kjungoo <kjungoo@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/12 16:13:31 by kjungoo           #+#    #+#             */
-/*   Updated: 2022/07/14 12:41:44 by kjungoo          ###   ########.fr       */
+/*   Updated: 2022/07/28 18:41:12 by kjungoo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,6 @@ void	*ft_calloc(size_t count, size_t size)
 	ptr = (void *)malloc(count * size);
 	if (ptr == 0)
 		return (0);
-	ft_memset(ptr, 0, count * size);
+	ft_bzero(ptr, count * size);
 	return (ptr);
 }
