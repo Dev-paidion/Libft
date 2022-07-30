@@ -6,7 +6,7 @@
 /*   By: kjungoo <kjungoo@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 17:03:26 by kjungoo           #+#    #+#             */
-/*   Updated: 2022/07/13 17:47:04 by kjungoo          ###   ########.fr       */
+/*   Updated: 2022/07/29 19:38:15 by kjungoo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ void	ft_bzero(void *s, size_t n)
 	str = (unsigned char *)s;
 	while (i < n)
 	{
-		str[i++] = 0;
+		str[i] = 0;
+		++i;
 	}
 }

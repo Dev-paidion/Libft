@@ -6,7 +6,7 @@
 /*   By: kjungoo <kjungoo@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/15 17:19:53 by kjungoo           #+#    #+#             */
-/*   Updated: 2022/07/29 17:51:10 by kjungoo          ###   ########.fr       */
+/*   Updated: 2022/07/30 12:52:21 by kjungoo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,8 @@ static size_t	ft_word_len(char const *s, char c)
 	size_t	i;
 	size_t	len;
 
+	i = 0;
+	len = 0;
 	while (s[i] && s[i] != c)
 	{
 		i++;
@@ -84,9 +86,11 @@ char	**ft_split(char const *s, char c)
 	size_t	count;
 	char	**p_arr;
 
+	if (s == 0)
+		return (0);
 	i = 0;
 	count = ft_word_count(s, c);
-	p_arr = (char **)malloc(sizeof(char *) + (count + 1));
+	p_arr = (char **)malloc(sizeof(char *) * (count + 1));
 	if (p_arr == 0)
 		return (0);
 	while (i < count)
