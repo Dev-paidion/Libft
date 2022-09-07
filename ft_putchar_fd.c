@@ -6,7 +6,7 @@
 /*   By: kjungoo <kjungoo@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/18 20:34:42 by kjungoo           #+#    #+#             */
-/*   Updated: 2022/07/20 14:12:03 by kjungoo          ###   ########.fr       */
+/*   Updated: 2022/08/26 17:23:49 by kjungoo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,7 @@
 
 void	ft_putchar_fd(char c, int fd)
 {
+	if (fd < 0)
+		return ;
 	write(fd, &c, 1);
 }

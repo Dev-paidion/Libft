@@ -6,7 +6,7 @@
 /*   By: kjungoo <kjungoo@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/14 15:55:48 by kjungoo           #+#    #+#             */
-/*   Updated: 2022/07/28 17:36:24 by kjungoo          ###   ########.fr       */
+/*   Updated: 2022/08/26 14:08:03 by kjungoo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	src_len = ft_strlen(src);
 	if (dstsize == 0)
 		return (src_len);
-	while (src[i] && i < dstsize - 1)
+	while (src[i] && i + 1 < dstsize)
 	{
 		dst[i] = src[i];
 		i++;

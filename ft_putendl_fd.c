@@ -6,7 +6,7 @@
 /*   By: kjungoo <kjungoo@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/18 20:42:42 by kjungoo           #+#    #+#             */
-/*   Updated: 2022/07/20 14:14:35 by kjungoo          ###   ########.fr       */
+/*   Updated: 2022/08/26 17:24:00 by kjungoo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
+	if (fd < 0)
+		return ;
 	ft_putstr_fd(s, fd);
 	write(fd, "\n", 1);
 }
